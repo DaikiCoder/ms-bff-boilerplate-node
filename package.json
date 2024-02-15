@@ -1,0 +1,26 @@
+{
+  "name": "ms-bff-boilerplate-node",
+  "version": "1.0.0",
+  "description": "Microservice BFF Boilerplate with Node.js, Express and Typescript.",
+  "homepage": "https://github.com/DaikiCoder/ms-bff-boilerplate-node#readme",
+  "author": "DaikiCoder",
+  "license": "MIT",
+  "main": "main.js",
+  "scripts": {
+    "tsc": "tsc",
+    "watch-tsc": "tsc --watch",
+    "watch-node": "node --watch --env-file=.env.local dist/main.js",
+    "dev": "concurrently \"npm:watch-tsc\" \"npm:watch-node\"",
+    "start": "tsc --build && node --env-file=.env dist/main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.11.17",
+    "concurrently": "^8.2.2",
+    "typescript": "^5.3.3"
+  }
+}
